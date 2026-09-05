@@ -1,0 +1,35 @@
+<idea-plugin>
+    <id>com.yourname.devpulse</id>
+    <name>devDashboard</name>
+    <vendor email="zyj_915@126.com" url="https://your-website.com">Your Name</vendor>
+
+    <description><![CDATA[
+        <h2>DevDashboard · Developer Data Pulse</h2>
+        View your GitHub project data in real time inside the IDE: total stars, open issues, and stars gained today.
+    ]]></description>
+
+    <!-- 依赖声明 -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <!-- 扩展点注册 -->
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- 1. 注册侧边栏工具窗口 -->
+        <toolWindow
+            id="DevDashboard"
+            anchor="right"
+            icon="/icons/logo.svg"
+            factoryClass="com.yourname.devpulse.ui.DashboardToolWindowFactory"
+            canCloseContents="false"/>
+
+        <!-- 2. 注册设置页面 (Settings -> Tools -> DevPulse) -->
+        <projectConfigurable
+            parentId="tools"
+            instance="com.yourname.devpulse.settings.DevPulseSettingsConfigurable"
+            id="com.yourname.devpulse.settings"
+            displayName="DevDashboard"/>
+
+        <!-- 3. 应用启动监听 (StartupActivity 通过扩展点注册) -->
+        <postStartupActivity implementation="com.yourname.devpulse.DevPulseStartupActivity"/>
+    </extensions>
+</idea-plugin>
