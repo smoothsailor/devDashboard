@@ -3,10 +3,9 @@
     <name>devDashboard</name>
     <vendor email="zyj_915@126.com" url="https://github.com/smoothsailor/devDashboard/issues">devDashboard</vendor>
 
-    <description><![CDATA[
-        <h2>DevDashboard · Developer Data Pulse</h2>
-        View your GitHub project data in real time inside the IDE: total stars, open issues, and stars gained today.
-    ]]></description>
+    <description>
+        DevDashboard brings your GitHub stats directly into your IDE. View total stars, daily star growth, open issues, and pull requests without leaving IntelliJ IDEA. Stay informed and motivated at a glance.
+    </description>
 
     <!-- 依赖声明 -->
     <depends>com.intellij.modules.platform</depends>
