@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:api.github.com)",
+      "Bash(java -version)",
+      "Bash(./gradlew.bat compileJava)",
+      "WebFetch(domain:raw.githubusercontent.com)"
+    ]
+  }
+}
